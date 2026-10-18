@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#eaf1fb">
-  <meta name="description" content="Mohamed Yassine Fattoum — software engineer focused on industrial machine vision, C++/OpenCV, C# inspection software and AI-assisted quality control. Based in Karlsruhe, Germany.">
+  <meta name="theme-color" content="#0b1423">
+  <meta name="description" content="Mohamed Yassine Fattoum — software engineer building production-ready applications, reusable C++/C# components, system integrations and industrial computer-vision solutions. Based in Karlsruhe, Germany.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mohamed Yassine Fattoum | Industrial Machine Vision Engineer">
-  <meta property="og:description" content="Industrial machine vision, inspection software, computer vision and automation.">
-  <title>Mohamed Yassine Fattoum — Software Engineer</title>
+  <meta property="og:title" content="Mohamed Yassine Fattoum | Software Engineer & Applied Computer Vision">
+  <meta property="og:description" content="Software engineering, application development, system integration, industrial computer vision and automation.">
+  <title>Mohamed Yassine Fattoum — Software Engineer &amp; Computer Vision</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,7 +118,7 @@
 
     section.section { padding-block: clamp(70px, 9vw, 112px); border-top: 1px solid var(--line); }
     .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
-    .section-kicker { margin-bottom: 8px; color: var(--blue); font: 500 .82rem var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+    .section-kicker { margin-bottom: 10px; color: var(--blue); font: 700 clamp(1rem, 1.2vw, 1.14rem)/1.35 var(--mono); letter-spacing: .10em; text-transform: uppercase; }
     h2 { margin-bottom: 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: -.065em; font-weight: 800; }
     .section-intro { max-width: 560px; margin: 14px 0 0; color: var(--muted); }
     .section-index { color: var(--muted); font: .88rem var(--mono); white-space: nowrap; }
@@ -196,12 +196,16 @@
     .education-card h3 { margin-bottom: 8px; font-size: 1rem; line-height: 1.45; }
     .education-card p { margin-bottom: 0; color: var(--muted); font-size: .84rem; }
 
-    .contact-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; padding: clamp(25px, 5vw, 54px); border: 1px solid var(--line); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); }
-    .contact-panel h2 { max-width: 650px; }
-    .contact-panel p { max-width: 560px; margin: 14px 0 0; color: var(--muted); }
-    .contact-actions { display: grid; gap: 10px; min-width: 200px; }
-    .contact-meta { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 25px; color: var(--muted); font-size: .85rem; }
-    .contact-meta a { color: var(--ink); }
+    .contact-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .58fr); align-items: center; gap: clamp(24px, 4vw, 48px); padding: clamp(25px, 5vw, 54px); border: 1px solid var(--line); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); }
+    .contact-details-column { min-width: 0; }
+    .contact-actions { display: grid; gap: 10px; min-width: 0; }
+    .contact-meta { display: grid; grid-template-columns: 1fr; align-items: start; gap: 18px; margin-top: 26px; color: var(--muted); font-size: .98rem; }
+    .contact-meta .contact-icon-link, .contact-meta .contact-icon-item { display: inline-flex; align-items: center; gap: 12px; width: fit-content; max-width: 100%; min-width: 0; line-height: 1.5; }
+    .contact-meta .contact-icon-link { color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+    .contact-meta .contact-icon-link:hover { color: var(--blue); }
+    .contact-meta .contact-icon-link svg, .contact-meta .contact-icon-item svg { width: 22px; height: 22px; flex: 0 0 22px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-meta .contact-icon-link.linkedin svg { fill: var(--blue); stroke: none; }
+    .contact-meta .contact-icon-item span { color: var(--ink); }
     #copyStatus { min-height: 1.4em; margin: 8px 0 0; color: var(--green); font-size: .78rem; }
 
     .site-footer { padding: 28px 0 40px; color: var(--muted); font-size: .78rem; }
@@ -279,7 +283,7 @@
         <span class="brand-mark" aria-hidden="true">YF</span>
         <span class="brand-copy">
           <strong>Mohamed Yassine Fattoum</strong>
-          <span>Software Engineer Specialized In Industrial Machine Vision</span>
+          <span>Machine Vision · Software</span>
         </span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
@@ -299,7 +303,7 @@
             <option value="fr">Français</option>
           </select>
         </label>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">☾</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="true" title="Switch to light theme">☀</button>
       </div>
     </div>
   </header>
@@ -309,48 +313,48 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span id="statusText">Open to opportunities · Karlsruhe, Germany</span></p>
-          <h1 id="hero-title">Turning images into <span class="accent">industrial decisions.</span></h1>
-          <p class="hero-role">Software Engineer · Industrial Machine Vision</p>
-          <p class="hero-copy">I build the software that helps production lines inspect parts reliably — from C++ image-processing libraries and C# inspection interfaces to AI inference and on-site validation.</p>
+          <h1 id="hero-title">Building software for <span class="accent">real-world systems.</span></h1>
+          <p class="hero-role">Software Engineer · Software Systems · Industrial Vision</p>
+          <p class="hero-copy">I design and build robust software—from reusable C++ components and C# applications to system integrations and computer-vision solutions used in industrial environments. I work across the lifecycle, from technical exploration to reliable delivery.</p>
           <div class="button-row">
             <a class="button primary" href="#projects">Explore selected projects <span aria-hidden="true">↘</span></a>
             <a class="button" href="mailto:mohamedyassinefattoum@gmail.com">Contact me <span aria-hidden="true">↗</span></a>
             <a class="button" href="https://www.linkedin.com/in/mohamed-yassine-fattoum/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="hero-note">C++ / OpenCV · C# · Computer Vision · AI · Industrial Automation</p>
+          <p class="hero-note">C++ / C# · Python · Software Engineering · Computer Vision · Integration</p>
         </div>
 
         <div class="portrait-area">
           <div class="portrait-frame">
             <div class="portrait-placeholder" id="portraitFallback">
               <strong>Mohamed Yassine Fattoum</strong>
-              <span>Add your portrait at <code>images/yassine.jpg</code>.</span>
+              <span>Add your portrait at <code>images/yassine_photo.jpg</code>.</span>
             </div>
-            <img id="portrait" src="images/yassine.jpg" alt="Portrait of Mohamed Yassine Fattoum" fetchpriority="high">
+            <img id="portrait" src="images/yassine_photo.jpg" alt="Portrait of Mohamed Yassine Fattoum" fetchpriority="high">
           </div>
           <div class="portrait-caption">
-            <strong>Industrial machine vision</strong>
-            <span>From feasibility to production-line validation</span>
+            <strong>Software engineering &amp; computer vision</strong>
+            <span>From reusable code to real-world deployment</span>
           </div>
         </div>
       </section>
 
       <div class="quick-stats" aria-label="Career highlights">
-        <div class="stat"><strong>3 years</strong><span>Industrial machine vision</span></div>
+        <div class="stat"><strong>3 years</strong><span>Software development &amp; machine vision</span></div>
         <div class="stat"><strong>6 machines</strong><span>Automotive inspection systems delivered</span></div>
         <div class="stat"><strong>4+ projects</strong><span>Technical leadership and intern supervision</span></div>
       </div>
 
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
-          <div><p class="section-kicker">01 / Profile</p><h2 id="about-title">Engineering that reaches the factory floor.</h2></div>
+          <div><p class="section-kicker">01 / Profile</p><h2 id="about-title">Software engineering for real-world systems.</h2></div>
           <span class="section-index">WHO I AM</span>
         </div>
         <div class="about-grid">
           <div class="about-copy">
-            <p>I am a software development engineer focused on industrial machine vision, with experience delivering inspection systems for automotive and textile applications.</p>
-            <p>My work spans the full engineering chain: camera and optics setup, image-processing algorithms, C++ libraries, C# interfaces, PLC/database integration, and functional validation at customer sites. I also integrate ONNX models with OpenCV DNN for classification, segmentation and object-detection tasks.</p>
-            <p>After working on industrial inspection projects at ARMA, I am now based in Karlsruhe and looking for opportunities in Germany where software engineering, computer vision and automation meet.</p>
+            <p>I am a software engineer with hands-on experience designing and delivering production software, including industrial machine-vision systems for automotive and textile applications.</p>
+            <p>My work spans software design and implementation—reusable C++ libraries, C# applications, JSON handling, database and PLC integration, and performance optimisation—alongside image processing, camera configuration and ONNX-based AI with OpenCV DNN.</p>
+            <p>I enjoy solving practical engineering problems across the software lifecycle, from feasibility studies and prototyping to integration, industrialisation and customer-site validation. Based in Karlsruhe, I am open to software engineering roles as well as applied computer-vision and automation positions in Germany.</p>
           </div>
           <div class="principles" aria-label="Working approach">
             <div class="principle"><span class="principle-number">01</span><div><strong>Practical computer vision</strong><span>Algorithms designed around real parts, production constraints and inspection needs.</span></div></div>
@@ -440,14 +444,15 @@
         </div>
       </section>
 
-      <section class="section" id="contact" aria-labelledby="contact-title">
+      <section class="section" id="contact" aria-label="Contact details">
         <div class="contact-panel">
-          <div>
+          <div class="contact-details-column">
             <p class="section-kicker">06 / Contact</p>
-            <h2 id="contact-title">Have a machine-vision challenge?</h2>
-            <p>I am interested in software engineering, computer vision and industrial automation opportunities in Germany. Send me a message and let's discuss your project or team.</p>
-            <div class="contact-meta">
-              <span id="contactLocation">Based in Karlsruhe, Germany</span>
+            <div class="contact-meta" aria-label="Contact information">
+              <span class="contact-icon-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <span id="contactLocation">Based in Karlsruhe, Germany</span>
+              </span>
               <a class="contact-icon-link" id="phoneLink" href="tel:+491796947902" aria-label="Call +49 179 6947902">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
                 <span>+49 179 6947902</span>
@@ -689,12 +694,12 @@
       document.querySelector('meta[name="theme-color"]').content = dark ? '#0b1423' : '#eaf1fb';
     }
     let savedTheme = null;
-    try { savedTheme = localStorage.getItem('portfolio-theme'); } catch (_) { /* Storage can be disabled. */ }
-    setTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light');
+    try { savedTheme = localStorage.getItem('portfolio-theme-v2'); } catch (_) { /* Storage can be disabled. */ }
+    setTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'dark');
     themeToggle.addEventListener('click', () => {
       const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       setTheme(nextTheme);
-      try { localStorage.setItem('portfolio-theme', nextTheme); } catch (_) { /* Theme still works without storage. */ }
+      try { localStorage.setItem('portfolio-theme-v2', nextTheme); } catch (_) { /* Theme still works without storage. */ }
     });
 
     // Copy-to-clipboard with a fallback for browsers without Clipboard API access.
@@ -752,29 +757,83 @@
       }));
 
       const projectText = {
-        en: [
-          { title: 'FlexiBowl Machine Vision & Robotics', client: 'Aptiv, Morocco', date: 'Mar – Jul 2026', type: 'Robotics', description: 'Industrial inspection project combining machine vision with a FlexiBowl flexible feeder and robotics.', contribution: 'Machine-vision software and system integration for an automated inspection application.', media: ['FlexiBowl machine vision and robotics project'] },
-          { title: 'Seat Heating Resistance Wires', client: 'Lear, Bizerte, Tunisia', date: 'Sep 2025 – Feb 2026', type: 'Automotive inspection', description: 'Quality-inspection machine for resistance wires used in automotive seat-heating systems.', contribution: 'Vision inspection development with links to industrial control and production data.', media: ['Seat-heating resistance wire inspection system', 'Additional view of the seat-heating inspection project', 'Video of the seat-heating resistance wire inspection project'] },
-          { title: 'LCV Carrier', client: 'Lacroix, Zaghouan, Tunisia', date: 'Sep – Dec 2025', type: 'Automotive inspection', description: 'Quality-inspection machine for an LCV carrier component.', contribution: 'Industrial machine-vision software for component quality inspection.', media: ['LCV Carrier inspection project'] },
-          { title: 'LED Tail Light — Toyota C-HR 2025', client: 'Lacroix, Zaghouan, Tunisia', date: 'May – Jul 2025', type: 'Automotive inspection', description: 'Quality-inspection application for the LED tail light of the 2025 Toyota C-HR.', contribution: 'Machine-vision inspection project. The video below is available directly with in-page playback controls.', media: ['LED tail-light inspection project video'] },
-          { title: 'Automotive Connector', client: 'Aptiv, Morocco', date: '2024', type: 'Automotive inspection', description: 'Quality-inspection machine for an automotive connector.', contribution: 'Industrial image-processing and inspection application within an automated test environment.', media: ['Automotive connector inspection project'] },
-          { title: 'Automatic Gearbox Housing', client: 'Etoggle / PSA / Valeo, Tunisia', date: 'Nov 2023 – Feb 2024', type: 'Automotive inspection', description: 'Quality-inspection machine for an automatic gearbox housing.', contribution: 'Vision-system development for an automotive manufacturing application.', media: ['Automatic gearbox housing inspection project'] }
-        ],
         de: [
-          { title: 'FlexiBowl: Bildverarbeitung & Robotik', client: 'Aptiv, Marokko', date: 'März – Juli 2026', type: 'Robotik', description: 'Industrielles Prüfprojekt, das Bildverarbeitung mit einem flexiblen FlexiBowl-Zuführsystem und Robotik verbindet.', contribution: 'Entwicklung der Bildverarbeitungssoftware und Systemintegration für eine automatisierte Prüfanwendung.', media: ['FlexiBowl-Projekt mit Bildverarbeitung und Robotik'] },
-          { title: 'Heizdraht-Widerstände für Sitzheizungen', client: 'Lear, Bizerte, Tunesien', date: 'Sept. 2025 – Feb. 2026', type: 'Automobilprüfung', description: 'Prüfmaschine für Widerstandsdrähte in automobilen Sitzheizungssystemen.', contribution: 'Entwicklung der Bildprüfung mit Anbindung an die industrielle Steuerung und Produktionsdaten.', media: ['Prüfsystem für Sitzheizungs-Widerstandsdrähte', 'Zusätzliche Ansicht des Sitzheizungs-Prüfprojekts', 'Video des Prüfprojekts für Sitzheizungs-Widerstandsdrähte'] },
-          { title: 'LCV Carrier', client: 'Lacroix, Zaghouan, Tunesien', date: 'Sept. – Dez. 2025', type: 'Automobilprüfung', description: 'Prüfmaschine zur Qualitätskontrolle eines LCV-Trägerbauteils.', contribution: 'Industrielle Bildverarbeitungssoftware zur Qualitätsprüfung von Bauteilen.', media: ['Prüfprojekt für LCV Carrier'] },
-          { title: 'LED-Rückleuchte — Toyota C-HR 2025', client: 'Lacroix, Zaghouan, Tunesien', date: 'Mai – Juli 2025', type: 'Automobilprüfung', description: 'Qualitätsprüfanwendung für die LED-Rückleuchte des Toyota C-HR Modelljahr 2025.', contribution: 'Bildverarbeitungs-Prüfprojekt. Das Video kann direkt mit den Steuerelementen auf dieser Seite abgespielt werden.', media: ['Video zum Prüfprojekt für die LED-Rückleuchte'] },
-          { title: 'Automobil-Steckverbinder', client: 'Aptiv, Marokko', date: '2024', type: 'Automobilprüfung', description: 'Prüfmaschine zur Qualitätskontrolle eines Automobil-Steckverbinders.', contribution: 'Industrielle Bildverarbeitungs- und Prüfanwendung in einer automatisierten Testumgebung.', media: ['Prüfprojekt für Automobil-Steckverbinder'] },
-          { title: 'Gehäuse für Automatikgetriebe', client: 'Etoggle / PSA / Valeo, Tunesien', date: 'Nov. 2023 – Feb. 2024', type: 'Automobilprüfung', description: 'Prüfmaschine zur Qualitätskontrolle eines Gehäuses für ein Automatikgetriebe.', contribution: 'Entwicklung eines Bildverarbeitungssystems für eine Anwendung in der Automobilfertigung.', media: ['Prüfprojekt für ein Automatikgetriebegehäuse'] }
+          {
+            title: 'Automatisierte Klassifizierung und robotergestützte Handhabung von Automobilteilen',
+            client: 'Aptiv, Marokko', date: 'März – Juli 2026', type: 'Industrielle Bildverarbeitung & Robotik',
+            description: 'Automatisiertes System zur Klassifizierung und Handhabung von Automobilteilen mit FlexiBowl-Zuführung, KUKA-Roboter, Cognex-basierter Teileidentifikation und Keyence-Prüfung der Aufnahmevorrichtung.',
+            contribution: 'Konfiguration und Inbetriebnahme der Cognex- und Keyence-Vision-Systeme zur automatischen Teileidentifikation und abschließenden Prüfung der Aufnahmevorrichtung. Durchführung der Kamera-Roboter-Koordinatenkalibrierung zur Ausrichtung der Bildverarbeitung am Roboter-Koordinatensystem sowie Erstellung und Validierung von Kamera-Jobdateien für verschiedene Teilevarianten und Produktreferenzen.',
+            media: ['Automatisiertes System zur Klassifizierung von Automobilteilen mit FlexiBowl, KUKA-Robotik, Cognex und Keyence']
+          },
+          {
+            title: 'Prüfung von Heizdrähten für Sitzheizungen', client: 'Lear, Bizerte, Tunesien', date: 'Sept. 2025 – Feb. 2026', type: 'Automobilprüfung',
+            description: 'Automatisiertes industrielles Prüfsystem für Widerstandsdrähte von Fahrzeugsitzheizungen mit kundenspezifischen Bildverarbeitungsalgorithmen, C++/OpenCV-Verarbeitung, C#-Oberflächen und koordinierter Maschinensteuerung.',
+            contribution: 'Durchführung von Machbarkeitsstudien und Entwicklung neuer Prüffunktionen für Sitzheizungs-Widerstandsdrähte mit Integration in die C++/OpenCV-Bildverarbeitungsbibliothek und deren C#-Oberfläche. Erstellung und Konfiguration von Prüf-Jobdateien für unterschiedliche Produktreferenzen. Mitarbeit am Refactoring der ATP-Desktopanwendung in C/LabWindows/CVI und Neuorganisation der Softwarearchitektur zur Verbesserung von Modularität, Wartbarkeit und Code-Struktur. Erweiterung der Anwendung zur Steuerung des Maschinenablaufs, der Bildverarbeitung, SPS-Kommunikation, Prüfberichte, Produktionsrückverfolgbarkeit, Schichtverwaltung und Gut-/Schlechtbewertung. Nach der Maschinenlieferung Unterstützung bei Inbetriebnahme und Kundenübergabe durch technische Abstimmung, Erläuterungen und Dokumentation.',
+            media: ['Automatisiertes Prüfsystem für Sitzheizungs-Widerstandsdrähte', 'Zusätzliche Ansicht der Prüfanlage für Sitzheizungsdrähte', 'Video des Prüfprozesses für Sitzheizungs-Widerstandsdrähte']
+          },
+          {
+            title: 'LCV Carrier', client: 'Lacroix, Zaghouan, Tunesien', date: 'Sept. – Dez. 2025', type: 'Automobilprüfung',
+            description: 'Qualitätsprüfmaschine für ein LCV-Trägerbauteil.',
+            contribution: 'Implementierung und Optimierung spezifischer Prüfroutinen in der C++/OpenCV-Bibliothek sowie Integration der Funktionen in die C#-Anwendung. Erstellung und Validierung produktspezifischer Vision-Jobdateien. Anpassung der LabWindows/CVI-Desktopanwendung zur Steuerung des Maschinenablaufs, Koordination der Bildverarbeitung mit SPS-gesteuerten Komponenten, Erstellung von Prüfberichten, Produktionsrückverfolgbarkeit, Schichtverwaltung und abschließender Qualitätsbewertung. Unterstützung bei System-Debugging, Integrationstests und Funktionsvalidierung der Anlage.',
+            media: ['Prüfprojekt für LCV Carrier']
+          },
+          {
+            title: 'LED-Rückleuchte — Toyota C-HR 2025', client: 'Lacroix, Zaghouan, Tunesien', date: 'Mai – Juli 2025', type: 'Automobilprüfung',
+            description: 'Qualitätsprüfanwendung für die LED-Rückleuchte des Toyota C-HR Modelljahr 2025.',
+            contribution: 'Entwicklung und Verbesserung von Prüfroutinen zur Erkennung LED-bezogener Fehler auf der Elektronikplatine. Debugging und Optimierung der Prüfsoftware zur Erhöhung der Zuverlässigkeit und Verkürzung der Maschinenzykluszeit. Konfiguration von Festo-Bewegungsachsen zur präzisen Positionierung der Produktaufnahme und Inspektionskamera sowie Einrichtung der Barcode-Lesung mit AutoID Navigator. Integration der Kommunikation mit dem Sherpa-MES zur Übertragung von Produktionsdaten und Prüfergebnissen sowie Mitarbeit an der Gesamtintegration und Funktionsvalidierung der Anlage.',
+            media: ['Video des Prüfprojekts für die LED-Rückleuchte']
+          },
+          {
+            title: 'Automobil-Steckverbinder', client: 'Aptiv, Marokko', date: '2024', type: 'Automobilprüfung',
+            description: 'Qualitätsprüfmaschine für einen Automobil-Steckverbinder.',
+            contribution: 'Entwicklung und Integration von Bildverarbeitungs- und Prüfroutinen für Automobil-Steckverbinder, einschließlich der Kontrolle kritischer Komponenten wie Dichtungen und Terminal Position Assurance (TPA)-Verriegelungen in einer automatisierten Testumgebung.',
+            media: ['Prüfprojekt für Automobil-Steckverbinder']
+          },
+          {
+            title: 'Gehäuse für Automatikgetriebe — Etoggle', client: 'PSA / Valeo, Tunesien', date: 'Nov. 2023 – Feb. 2024', type: 'Automobilprüfung',
+            description: 'Qualitätsprüfmaschine für ein Gehäuse eines Automatikgetriebes.',
+            contribution: 'Debugging und Wartung der C-basierten Prüfanwendung mit LabWindows/CVI, Feinabstimmung von Cognex-Vision-Jobdateien und Durchführung von Wiederholbarkeits- und Reproduzierbarkeitstests (R&R) zur Bewertung der Prüfkonstanz. Unterstützung bei mechanischen Wartungsarbeiten, Erstellung technischer Dokumentation und direkte Abstimmung mit dem Kunden vor Ort als technische Schnittstelle zwischen Unternehmen und Kunde, einschließlich Fehleranalyse und Sicherstellung eines zuverlässigen Maschinenbetriebs.',
+            media: ['Prüfprojekt für ein Automatikgetriebegehäuse']
+          }
         ],
         fr: [
-          { title: 'Vision industrielle & robotique FlexiBowl', client: 'Aptiv, Maroc', date: 'Mars – juil. 2026', type: 'Robotique', description: 'Projet d’inspection industrielle associant la vision industrielle à un système d’alimentation flexible FlexiBowl et à la robotique.', contribution: 'Développement du logiciel de vision et intégration du système pour une application d’inspection automatisée.', media: ['Projet FlexiBowl de vision industrielle et robotique'] },
-          { title: 'Fils résistifs de chauffage des sièges', client: 'Lear, Bizerte, Tunisie', date: 'Sept. 2025 – févr. 2026', type: 'Contrôle automobile', description: 'Machine de contrôle qualité des fils résistifs utilisés dans les systèmes de chauffage des sièges automobiles.', contribution: 'Développement du contrôle par vision et intégration avec le pilotage industriel et les données de production.', media: ['Système de contrôle des fils résistifs de sièges chauffants', 'Vue supplémentaire du projet de contrôle des sièges chauffants', 'Vidéo du projet de contrôle des fils résistifs de sièges chauffants'] },
-          { title: 'LCV Carrier', client: 'Lacroix, Zaghouan, Tunisie', date: 'Sept. – déc. 2025', type: 'Contrôle automobile', description: 'Machine de contrôle qualité d’un composant LCV Carrier.', contribution: 'Logiciel de vision industrielle dédié au contrôle qualité de composants.', media: ['Projet de contrôle du LCV Carrier'] },
-          { title: 'Feu arrière LED — Toyota C-HR 2025', client: 'Lacroix, Zaghouan, Tunisie', date: 'Mai – juil. 2025', type: 'Contrôle automobile', description: 'Application de contrôle qualité du feu arrière LED de la Toyota C-HR 2025.', contribution: 'Projet de contrôle par vision industrielle. La vidéo se lit directement sur cette page grâce aux commandes intégrées.', media: ['Vidéo du projet de contrôle du feu arrière LED'] },
-          { title: 'Connecteur automobile', client: 'Aptiv, Maroc', date: '2024', type: 'Contrôle automobile', description: 'Machine de contrôle qualité d’un connecteur automobile.', contribution: 'Application industrielle de traitement d’image et de contrôle intégrée à un environnement de test automatisé.', media: ['Projet de contrôle d’un connecteur automobile'] },
-          { title: 'Carter de boîte de vitesses automatique', client: 'Etoggle / PSA / Valeo, Tunisie', date: 'Nov. 2023 – févr. 2024', type: 'Contrôle automobile', description: 'Machine de contrôle qualité d’un carter de boîte de vitesses automatique.', contribution: 'Développement d’un système de vision pour une application de fabrication automobile.', media: ['Projet de contrôle d’un carter de boîte de vitesses automatique'] }
+          {
+            title: 'Classification automatisée de pièces automobiles & manipulation robotisée',
+            client: 'Aptiv, Maroc', date: 'Mars – juil. 2026', type: 'Vision industrielle & robotique',
+            description: 'Système automatisé de classification et de manipulation de pièces automobiles combinant un alimentateur flexible FlexiBowl, un robot KUKA, l’identification par vision Cognex et le contrôle du gabarit par Keyence.',
+            contribution: 'Configuration et mise en service des systèmes de vision Cognex et Keyence pour l’identification automatique des pièces et le contrôle final du gabarit. Réalisation de la calibration des coordonnées caméra-robot afin d’aligner les mesures de vision sur le repère du robot, puis création et validation des fichiers job caméra pour plusieurs variantes et références de pièces automobiles.',
+            media: ['Système de classification de pièces automobiles intégrant FlexiBowl, robot KUKA, vision Cognex et contrôle Keyence']
+          },
+          {
+            title: 'Contrôle des fils résistifs de chauffage des sièges', client: 'Lear, Bizerte, Tunisie', date: 'Sept. 2025 – févr. 2026', type: 'Contrôle automobile',
+            description: 'Système automatisé de contrôle industriel des fils résistifs de chauffage des sièges automobiles, associant des algorithmes de vision dédiés, le traitement C++/OpenCV, des interfaces C# et le pilotage coordonné de la machine.',
+            contribution: 'Réalisation d’études de faisabilité et développement de nouvelles fonctions de contrôle des fils résistifs, intégrées à la bibliothèque de vision C++/OpenCV et à son interface C#. Création et configuration des fichiers job pour différentes références produit. Participation au refactoring de l’application desktop ATP en C/LabWindows/CVI et à la réorganisation de son architecture logicielle pour améliorer modularité, maintenabilité et structure du code. Évolution de l’application qui orchestre le cycle machine, le traitement de vision, la communication PLC, la génération des rapports, la traçabilité de production, la gestion des équipes et le jugement conforme/non conforme. Après livraison, participation à la mise en service et au transfert au client avec échanges techniques et documentation.',
+            media: ['Système automatisé de contrôle des fils résistifs de sièges chauffants', 'Vue complémentaire de la machine de contrôle des fils résistifs', 'Vidéo du processus de contrôle des fils résistifs de sièges chauffants']
+          },
+          {
+            title: 'LCV Carrier', client: 'Lacroix, Zaghouan, Tunisie', date: 'Sept. – déc. 2025', type: 'Contrôle automobile',
+            description: 'Machine de contrôle qualité d’un composant LCV Carrier.',
+            contribution: 'Implémentation et optimisation de routines de contrôle dédiées dans la bibliothèque C++/OpenCV, puis intégration des nouvelles fonctions dans l’application C#. Préparation et validation de fichiers job de vision adaptés aux références produit. Adaptation de l’application desktop LabWindows/CVI pour piloter le cycle machine, coordonner la vision avec les équipements commandés par PLC, générer les rapports de contrôle, assurer la traçabilité de production, gérer les équipes et établir le verdict qualité final. Participation au débogage système, aux tests d’intégration et à la validation fonctionnelle de la machine.',
+            media: ['Projet de contrôle du LCV Carrier']
+          },
+          {
+            title: 'Feu arrière LED — Toyota C-HR 2025', client: 'Lacroix, Zaghouan, Tunisie', date: 'Mai – juil. 2025', type: 'Contrôle automobile',
+            description: 'Application de contrôle qualité du feu arrière LED de la Toyota C-HR 2025.',
+            contribution: 'Développement et amélioration de routines de contrôle destinées à détecter les défauts liés aux LED sur la carte électronique. Débogage et optimisation du logiciel afin d’améliorer la fiabilité de l’inspection et de réduire le temps de cycle machine. Configuration des axes Festo pour positionner précisément le posage produit et la caméra d’inspection, ainsi que configuration de la lecture des codes-barres avec AutoID Navigator. Intégration de la communication avec le MES Sherpa pour l’échange de données de production et la remontée des résultats d’inspection, puis participation à l’intégration globale et à la validation fonctionnelle de la machine.',
+            media: ['Vidéo du projet de contrôle du feu arrière LED']
+          },
+          {
+            title: 'Connecteur automobile', client: 'Aptiv, Maroc', date: '2024', type: 'Contrôle automobile',
+            description: 'Machine de contrôle qualité d’un connecteur automobile.',
+            contribution: 'Développement et intégration de routines de traitement d’image et de contrôle pour des connecteurs automobiles, avec vérification de composants critiques tels que les joints d’étanchéité et les verrous TPA (Terminal Position Assurance), dans un environnement de test automatisé.',
+            media: ['Projet de contrôle d’un connecteur automobile']
+          },
+          {
+            title: 'Carter de boîte de vitesses automatique — Etoggle', client: 'PSA / Valeo, Tunisie', date: 'Nov. 2023 – févr. 2024', type: 'Contrôle automobile',
+            description: 'Machine de contrôle qualité d’un carter de boîte de vitesses automatique.',
+            contribution: 'Débogage et maintenance du logiciel de contrôle en C développé sous LabWindows/CVI, ajustement des fichiers job Cognex et réalisation de tests de répétabilité et de reproductibilité (R&R) pour évaluer la stabilité du système de contrôle. Participation à la maintenance mécanique, rédaction de documentation technique et coordination directe avec le client sur site en tant qu’interlocuteur technique entre l’entreprise et le client, pour faciliter le dépannage et assurer la fiabilité de la machine.',
+            media: ['Projet de contrôle d’un carter de boîte de vitesses automatique']
+          }
         ]
       };
 
@@ -782,15 +841,15 @@
         en: {
           language: 'Language', nav: ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Contact'],
           status: 'Open to opportunities · Karlsruhe, Germany', brandRole: 'Machine Vision · Software',
-          heroTitle: 'Turning images into <span class="accent">industrial decisions.</span>',
-          heroRole: 'Software Engineer · Industrial Machine Vision',
-          heroCopy: 'I build the software that helps production lines inspect parts reliably — from C++ image-processing libraries and C# inspection interfaces to AI inference and on-site validation.',
+          heroTitle: 'Building software for <span class="accent">real-world systems.</span>',
+          heroRole: 'Software Engineer · Software Systems · Industrial Vision',
+          heroCopy: 'I design and build robust software—from reusable C++ components and C# applications to system integrations and computer-vision solutions used in industrial environments. I work across the lifecycle, from technical exploration to reliable delivery.',
           heroButtons: ['Explore selected projects <span aria-hidden="true">↘</span>', 'Contact me <span aria-hidden="true">↗</span>', 'LinkedIn <span aria-hidden="true">↗</span>'],
-          heroNote: 'C++ / OpenCV · C# · Computer Vision · AI · Industrial Automation',
-          portraitFallback: 'Add your portrait at <code>images/yassine.jpg</code>.', portraitTitle: 'Industrial machine vision', portraitCaption: 'From feasibility to production-line validation',
-          stats: [['3 years', 'Industrial machine vision'], ['6 machines', 'Automotive inspection systems delivered'], ['4+ projects', 'Technical leadership and intern supervision']],
+          heroNote: 'C++ / C# · Python · Software Engineering · Computer Vision · Integration',
+          portraitFallback: 'Add your portrait at <code>images/yassine_photo.jpg</code>.', portraitTitle: 'Software engineering & computer vision', portraitCaption: 'From reusable code to real-world deployment',
+          stats: [['3 years', 'Software development & machine vision'], ['6 machines', 'Automotive inspection systems delivered'], ['4+ projects', 'Technical leadership and intern supervision']],
           sections: [
-            ['01 / Profile', 'Engineering that reaches the factory floor.', 'WHO I AM'],
+            ['01 / Profile', 'Software engineering for real-world systems.', 'WHO I AM'],
             ['02 / Experience', 'From code to commissioning.', 'CAREER'],
             ['03 / Selected work', 'Projects built for real-world inspection.', 'PORTFOLIO'],
             ['04 / Toolkit', 'Tools I work with.', 'SKILLS'],
@@ -805,9 +864,9 @@
           mediaVideoError: 'Video could not be played. Check that the file exists, the path uses the correct capitalisation, and the MP4 uses a browser-supported codec (H.264/AAC).', openVideo: 'Open video file ↗',
           mediaImageError: 'Image not found. Check the file name, extension, capitalisation and folder path.', openImage: 'Try opening image ↗',
           about: [
-            'I am a software development engineer focused on industrial machine vision, with experience delivering inspection systems for automotive and textile applications.',
-            'My work spans the full engineering chain: camera and optics setup, image-processing algorithms, C++ libraries, C# interfaces, PLC/database integration, and functional validation at customer sites. I also integrate ONNX models with OpenCV DNN for classification, segmentation and object-detection tasks.',
-            'After working on industrial inspection projects at ARMA, I am now based in Karlsruhe and looking for opportunities in Germany where software engineering, computer vision and automation meet.'
+            'I am a software engineer with hands-on experience designing and delivering production software, including industrial machine-vision systems for automotive and textile applications.',
+            'My work spans software design and implementation—reusable C++ libraries, C# applications, JSON handling, database and PLC integration, and performance optimisation—alongside image processing, camera configuration and ONNX-based AI with OpenCV DNN.',
+            'I enjoy solving practical engineering problems across the software lifecycle, from feasibility studies and prototyping to integration, industrialisation and customer-site validation. Based in Karlsruhe, I am open to software engineering roles as well as applied computer-vision and automation positions in Germany.'
           ], principles: [['Practical computer vision', 'Algorithms designed around real parts, production constraints and inspection needs.'], ['End-to-end integration', 'Vision software connected to interfaces, PLCs, databases and factory equipment.'], ['Delivery and collaboration', 'Feasibility studies, technical coordination, intern mentoring and customer validation.']],
           experience: [
             ['Software Development Engineer', 'Developed and optimised an OpenCV-based C++ library for industrial image processing and inspection, using Git/GitLab and an Agile Scrum workflow.', 'Built C# interfaces around the vision library to configure inspection scenarios and handle JSON serialisation.', 'Contributed to the C/LabWindows CVI ATP platform for coordinating test machines, PLCs, MySQL databases and production equipment.', 'Integrated and configured Keyence, Cognex and Basler vision systems, including optical calibration and job setup with In-Sight Explorer and IV Navigator.', 'Integrated ONNX classification, segmentation and object-detection models through OpenCV DNN into C# inference pipelines.', 'Based in Megrine, Tunisia'],
@@ -833,15 +892,15 @@
         de: {
           language: 'Sprache', nav: ['Über mich', 'Erfahrung', 'Projekte', 'Fähigkeiten', 'Ausbildung', 'Kontakt'],
           status: 'Offen für neue Möglichkeiten · Karlsruhe, Deutschland', brandRole: 'Bildverarbeitung · Software',
-          heroTitle: 'Bilder in <span class="accent">industrielle Entscheidungen.</span> verwandeln',
-          heroRole: 'Softwareentwickler · Industrielle Bildverarbeitung',
-          heroCopy: 'Ich entwickle Software für die zuverlässige Prüfung von Bauteilen in Produktionslinien – von C++-Bildverarbeitungsbibliotheken und C#-Prüfoberflächen bis zu KI-Inferenz und Validierung vor Ort.',
+          heroTitle: 'Software entwickeln für <span class="accent">reale Systeme.</span>',
+          heroRole: 'Softwareentwickler · Softwaresysteme · Industrielle Bildverarbeitung',
+          heroCopy: 'Ich entwickle robuste Software – von wiederverwendbaren C++-Komponenten und C#-Anwendungen bis zu Systemintegrationen und Computer-Vision-Lösungen für industrielle Umgebungen. Dabei begleite ich Projekte von der technischen Konzeption bis zur zuverlässigen Umsetzung.',
           heroButtons: ['Ausgewählte Projekte ansehen <span aria-hidden="true">↘</span>', 'Kontakt aufnehmen <span aria-hidden="true">↗</span>', 'LinkedIn <span aria-hidden="true">↗</span>'],
-          heroNote: 'C++ / OpenCV · C# · Computer Vision · KI · Industrielle Automatisierung',
-          portraitFallback: 'Füge dein Porträt unter <code>images/yassine.jpg</code> hinzu.', portraitTitle: 'Industrielle Bildverarbeitung', portraitCaption: 'Von der Machbarkeitsstudie bis zur Validierung an der Produktionslinie',
-          stats: [['3 Jahre', 'Industrielle Bildverarbeitung'], ['6 Maschinen', 'Ausgelieferte Prüfmaschinen für die Automobilindustrie'], ['4+ Projekte', 'Technische Leitung und Betreuung von Praktikanten']],
+          heroNote: 'C++ / C# · Python · Softwareentwicklung · Computer Vision · Integration',
+          portraitFallback: 'Füge dein Porträt unter <code>images/yassine_photo.jpg</code> hinzu.', portraitTitle: 'Softwareentwicklung & Computer Vision', portraitCaption: 'Von wiederverwendbarem Code bis zum produktiven Einsatz',
+          stats: [['3 Jahre', 'Softwareentwicklung & Bildverarbeitung'], ['6 Maschinen', 'Ausgelieferte Prüfmaschinen für die Automobilindustrie'], ['4+ Projekte', 'Technische Leitung und Betreuung von Praktikanten']],
           sections: [
-            ['01 / Profil', 'Technik, die in der Produktion ankommt.', 'PROFIL'],
+            ['01 / Profil', 'Softwareentwicklung für reale Systeme.', 'PROFIL'],
             ['02 / Erfahrung', 'Vom Code zur Inbetriebnahme.', 'BERUFSERFAHRUNG'],
             ['03 / Ausgewählte Projekte', 'Projekte für die industrielle Qualitätsprüfung.', 'PORTFOLIO'],
             ['04 / Werkzeugkasten', 'Technologien und Werkzeuge.', 'FÄHIGKEITEN'],
@@ -856,9 +915,9 @@
           mediaVideoError: 'Das Video konnte nicht abgespielt werden. Prüfe, ob die Datei vorhanden ist, die Groß-/Kleinschreibung im Pfad stimmt und die MP4 einen unterstützten Codec (H.264/AAC) verwendet.', openVideo: 'Videodatei öffnen ↗',
           mediaImageError: 'Bild nicht gefunden. Prüfe Dateiname, Erweiterung, Groß-/Kleinschreibung und Ordnerpfad.', openImage: 'Bild direkt öffnen ↗',
           about: [
-            'Ich bin Softwareentwickler mit Schwerpunkt industrielle Bildverarbeitung und Erfahrung in der Umsetzung von Prüfsystemen für die Automobil- und Textilindustrie.',
-            'Meine Arbeit umfasst die gesamte Entwicklungskette: Kamera- und Optikeinrichtung, Bildverarbeitungsalgorithmen, C++-Bibliotheken, C#-Oberflächen, SPS-/Datenbankintegration und Funktionsvalidierung beim Kunden. Außerdem integriere ich ONNX-Modelle mit OpenCV DNN für Klassifikation, Segmentierung und Objekterkennung.',
-            'Nach meiner Arbeit an industriellen Prüfprojekten bei ARMA lebe ich jetzt in Karlsruhe und suche Möglichkeiten in Deutschland an der Schnittstelle von Softwareentwicklung, Computer Vision und Automatisierung.'
+            'Ich bin Softwareentwickler mit praktischer Erfahrung in der Konzeption und Umsetzung produktionsnaher Software, darunter industrielle Bildverarbeitungssysteme für die Automobil- und Textilindustrie.',
+            'Meine Arbeit verbindet Softwaredesign und Implementierung – wiederverwendbare C++-Bibliotheken, C#-Anwendungen, JSON-Verarbeitung, Datenbank- und SPS-Integration sowie Performanceoptimierung – mit Bildverarbeitung, Kamerakonfiguration und ONNX-basierter KI über OpenCV DNN.',
+            'Ich löse gerne praktische technische Aufgaben über den gesamten Softwarelebenszyklus hinweg – von Machbarkeitsstudien und Prototypen bis zu Integration, Industrialisierung und Abnahme beim Kunden. Ich lebe in Karlsruhe und bin offen für Stellen in der Softwareentwicklung sowie für angewandte Computer-Vision- und Automatisierungsaufgaben in Deutschland.'
           ], principles: [['Praxisnahe Bildverarbeitung', 'Algorithmen für reale Bauteile, Produktionsbedingungen und Prüfanforderungen.'], ['Durchgängige Integration', 'Bildverarbeitungssoftware verbunden mit Bedienoberflächen, SPS, Datenbanken und Produktionsanlagen.'], ['Umsetzung und Zusammenarbeit', 'Machbarkeitsstudien, technische Koordination, Betreuung von Praktikanten und Kundenabnahmen.']],
           experience: [
             ['Software Development Engineer', 'Entwicklung und Optimierung einer OpenCV-basierten C++-Bibliothek für industrielle Bildverarbeitung und Prüfung mit Git/GitLab und Agile Scrum.', 'Entwicklung von C#-Oberflächen zur Konfiguration von Prüfszenarien und JSON-Serialisierung.', 'Mitarbeit an der C/LabWindows-CVI-ATP-Plattform zur Koordination von Prüfmaschinen, SPS, MySQL-Datenbanken und Produktionsgeräten.', 'Integration und Konfiguration von Keyence-, Cognex- und Basler-Systemen einschließlich Optikkalibrierung und Job-Konfiguration mit In-Sight Explorer und IV Navigator.', 'Integration von ONNX-Modellen für Klassifikation, Segmentierung und Objekterkennung über OpenCV DNN in C#-Inferenzpipelines.', 'Standort: Megrine, Tunesien'],
@@ -884,15 +943,15 @@
         fr: {
           language: 'Langue', nav: ['À propos', 'Expérience', 'Projets', 'Compétences', 'Formation', 'Contact'],
           status: 'Ouvert aux opportunités · Karlsruhe, Allemagne', brandRole: 'Vision industrielle · Logiciel',
-          heroTitle: 'Transformer les images en <span class="accent">décisions industrielles.</span>',
-          heroRole: 'Ingénieur logiciel · Vision industrielle',
-          heroCopy: 'Je développe des logiciels qui permettent aux lignes de production de contrôler les pièces de manière fiable : bibliothèques de traitement d’image en C++, interfaces de contrôle en C#, inférence IA et validation sur site.',
+          heroTitle: 'Développer des logiciels pour <span class="accent">des systèmes réels.</span>',
+          heroRole: 'Ingénieur logiciel · Systèmes logiciels · Vision industrielle',
+          heroCopy: 'Je conçois des logiciels robustes : composants C++ réutilisables, applications C#, intégrations système et solutions de vision par ordinateur pour les environnements industriels. J’interviens tout au long du cycle, de l’étude technique jusqu’à la mise en production.',
           heroButtons: ['Voir les projets sélectionnés <span aria-hidden="true">↘</span>', 'Me contacter <span aria-hidden="true">↗</span>', 'LinkedIn <span aria-hidden="true">↗</span>'],
-          heroNote: 'C++ / OpenCV · C# · Vision par ordinateur · IA · Automatisation industrielle',
-          portraitFallback: 'Ajoutez votre portrait dans <code>images/yassine.jpg</code>.', portraitTitle: 'Vision industrielle', portraitCaption: 'De l’étude de faisabilité à la validation en production',
-          stats: [['3 ans', 'En vision industrielle'], ['6 machines', 'Systèmes de contrôle automobile livrés'], ['4+ projets', 'Pilotage technique et encadrement de stagiaires']],
+          heroNote: 'C++ / C# · Python · Génie logiciel · Vision par ordinateur · Intégration',
+          portraitFallback: 'Ajoutez votre portrait dans <code>images/yassine_photo.jpg</code>.', portraitTitle: 'Génie logiciel & vision par ordinateur', portraitCaption: 'Du code réutilisable au déploiement réel',
+          stats: [['3 ans', 'Développement logiciel & vision industrielle'], ['6 machines', 'Systèmes de contrôle automobile livrés'], ['4+ projets', 'Pilotage technique et encadrement de stagiaires']],
           sections: [
-            ['01 / Profil', 'L’ingénierie au service de l’atelier.', 'QUI JE SUIS'],
+            ['01 / Profil', 'Du logiciel aux systèmes en conditions réelles.', 'QUI JE SUIS'],
             ['02 / Expérience', 'Du code à la mise en service.', 'PARCOURS'],
             ['03 / Projets sélectionnés', 'Des projets conçus pour le contrôle industriel.', 'PORTFOLIO'],
             ['04 / Outils', 'Les technologies que j’utilise.', 'COMPÉTENCES'],
@@ -907,9 +966,9 @@
           mediaVideoError: 'La vidéo ne peut pas être lue. Vérifiez la présence du fichier, la casse du chemin et la compatibilité du codec MP4 (H.264/AAC).', openVideo: 'Ouvrir la vidéo ↗',
           mediaImageError: 'Image introuvable. Vérifiez le nom du fichier, l’extension, la casse et le chemin du dossier.', openImage: 'Ouvrir l’image directement ↗',
           about: [
-            'Je suis ingénieur en développement logiciel spécialisé en vision industrielle, avec une expérience dans la livraison de systèmes de contrôle pour les secteurs automobile et textile.',
-            'Mon travail couvre toute la chaîne : réglage des caméras et de l’optique, algorithmes de traitement d’image, bibliothèques C++, interfaces C#, intégration API/PLC et bases de données, puis validation fonctionnelle chez le client. J’intègre également des modèles ONNX avec OpenCV DNN pour la classification, la segmentation et la détection d’objets.',
-            'Après avoir travaillé sur des projets de contrôle industriel chez ARMA, je suis maintenant basé à Karlsruhe et recherche des opportunités en Allemagne à l’intersection du développement logiciel, de la vision par ordinateur et de l’automatisation.'
+            'Je suis ingénieur logiciel et j’ai une expérience concrète dans la conception et la livraison de logiciels destinés à la production, notamment des systèmes de vision industrielle pour les secteurs automobile et textile.',
+            'Mon travail associe conception et développement logiciel — bibliothèques C++ réutilisables, applications C#, gestion JSON, intégration des bases de données et automates, optimisation des performances — au traitement d’image, au réglage des caméras et à l’IA via ONNX et OpenCV DNN.',
+            'J’aime résoudre des problèmes techniques concrets tout au long du cycle logiciel, des études de faisabilité et prototypes jusqu’à l’intégration, l’industrialisation et la validation chez le client. Basé à Karlsruhe, je recherche des postes en développement logiciel ainsi que des missions appliquées en vision par ordinateur et automatisation en Allemagne.'
           ], principles: [['Une vision industrielle pragmatique', 'Des algorithmes pensés pour les pièces réelles, les contraintes de production et les besoins de contrôle.'], ['Une intégration de bout en bout', 'Des logiciels de vision reliés aux interfaces, automates, bases de données et équipements de production.'], ['Livraison et collaboration', 'Études de faisabilité, coordination technique, encadrement de stagiaires et validation client.']],
           experience: [
             ['Ingénieur développement logiciel', 'Développement et optimisation d’une bibliothèque C++ basée sur OpenCV pour le traitement et le contrôle d’images industrielles, avec Git/GitLab et Agile Scrum.', 'Développement d’interfaces C# autour de la bibliothèque de vision pour configurer les scénarios de contrôle et gérer la sérialisation JSON.', 'Contribution à la plateforme ATP en C/LabWindows CVI pour coordonner machines de test, automates, bases MySQL et équipements de production.', 'Intégration et configuration de systèmes Keyence, Cognex et Basler, avec calibration optique et paramétrage dans In-Sight Explorer et IV Navigator.', 'Intégration de modèles ONNX de classification, segmentation et détection d’objets via OpenCV DNN dans des pipelines d’inférence C#.', 'Basé à Megrine, Tunisie'],
@@ -948,6 +1007,24 @@
       }
 
       function translateProjectData(lang) {
+        // English is the source of truth: preserve the latest, project-specific content
+        // from the main projects array instead of replacing it with an older translation table.
+        if (lang === 'en') {
+          projects.forEach((project, index) => {
+            const original = originalProjects[index];
+            project.title = original.title;
+            project.client = original.client;
+            project.date = original.date;
+            project.type = original.type;
+            project.description = original.description;
+            project.contribution = original.contribution;
+            project.technologies = [...original.technologies];
+            project.categories = [...original.categories];
+            project.media = original.media.map(item => ({ ...item }));
+          });
+          return;
+        }
+
         const localized = projectText[lang];
         projects.forEach((project, index) => {
           const data = localized[index];
@@ -1021,10 +1098,10 @@
         languageLabel.textContent = t.language;
         languageSelect.setAttribute('aria-label', t.selectLanguage);
         document.title = lang === 'de'
-          ? 'Mohamed Yassine Fattoum — Ingenieur für industrielle Bildverarbeitung'
+          ? 'Mohamed Yassine Fattoum — Softwareentwickler & Computer Vision'
           : lang === 'fr'
-            ? 'Mohamed Yassine Fattoum — Ingénieur en vision industrielle'
-            : 'Mohamed Yassine Fattoum — Industrial Machine Vision Engineer';
+            ? 'Mohamed Yassine Fattoum — Ingénieur logiciel & vision par ordinateur'
+            : 'Mohamed Yassine Fattoum — Software Engineer & Computer Vision';
         document.querySelector('meta[name="description"]').content = t.heroCopy;
         document.querySelector('meta[property="og:title"]').content = document.title;
         document.querySelector('meta[property="og:description"]').content = t.heroCopy;
@@ -1106,7 +1183,6 @@
           card.querySelector('h3').textContent = t.education[index][0];
           card.querySelectorAll('p')[1].textContent = t.education[index][1];
         });
-        setText('#contact .contact-panel > div:first-child > p:not(.section-kicker)', t.contactCopy);
         setText('#contactLocation', t.location);
         setText('#linkedinText', t.linkedin);
         setText('#copyEmail', t.copyEmail);
