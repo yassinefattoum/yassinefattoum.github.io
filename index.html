@@ -785,6 +785,53 @@
       }));
 
       const projectText = {
+        // Keep complete project content in all three languages. Descriptions and
+        // engineering contributions are translated together, so no language relies
+        // on the short fallback text from the original HTML.
+        en: [
+          {
+            title: 'FlexiBowl Machine Vision & Robotics',
+            client: 'Aptiv, Morocco', date: 'Mar – Jul 2026', type: 'Industrial Vision & Robotics',
+            description: 'Automated system for classifying and handling automotive parts, combining a FlexiBowl flexible feeder, a KUKA robot, Cognex-based part identification and Keyence inspection of the holding fixture.',
+            contribution: 'Configured and commissioned Cognex and Keyence vision systems for automatic part identification and final fixture inspection. Calibrated camera-to-robot coordinates to align vision measurements with the robot coordinate frame, then created and validated camera job files for multiple automotive part variants and product references.',
+            media: ['Automated automotive-part classification system integrating FlexiBowl, KUKA robotics, Cognex vision and Keyence inspection']
+          },
+          {
+            title: 'Seat Heating Resistance Wires',
+            client: 'Lear, Bizerte, Tunisia', date: 'Sep 2025 – Feb 2026', type: 'Automotive Inspection',
+            description: 'Automated industrial inspection system for automotive seat-heating resistance wires, combining dedicated machine-vision algorithms, C++/OpenCV processing, C# interfaces and coordinated machine control.',
+            contribution: 'Conducted feasibility studies and developed new inspection functions for seat-heating resistance wires, integrating them into the C++/OpenCV vision library and its C# interface. Created and configured inspection job files for different product references. Contributed to refactoring the ATP desktop application in C/LabWindows/CVI and reorganising its software architecture to improve modularity, maintainability and code structure. Extended the application to coordinate the machine cycle, vision processing, PLC communication, inspection reports, production traceability, shift management and pass/fail decisions. After machine delivery, supported commissioning and customer handover through technical coordination, explanations and documentation.',
+            media: ['Automated inspection system for seat-heating resistance wires', 'Additional view of the seat-heating wire inspection machine', 'Video of the seat-heating resistance wire inspection process']
+          },
+          {
+            title: 'LCV Carrier',
+            client: 'Lacroix, Zaghouan, Tunisia', date: 'Sep – Dec 2025', type: 'Automotive Inspection',
+            description: 'Quality-inspection machine for an LCV Carrier component.',
+            contribution: 'Implemented and optimised dedicated inspection routines in the C++/OpenCV library and integrated the new functions into the C# application. Prepared and validated vision job files for specific product references. Adapted the LabWindows/CVI desktop application to control the machine cycle, coordinate vision with PLC-controlled equipment, generate inspection reports, maintain production traceability, manage shifts and produce the final quality verdict. Supported system debugging, integration testing and functional validation of the machine.',
+            media: ['LCV Carrier inspection project']
+          },
+          {
+            title: 'LED Tail Light — Toyota C-HR 2025',
+            client: 'Lacroix, Zaghouan, Tunisia', date: 'May – Jul 2025', type: 'Automotive Inspection',
+            description: 'Quality-inspection application for the LED tail light of the 2025 Toyota C-HR.',
+            contribution: 'Developed and improved inspection routines to detect LED-related defects on the electronic board. Debugged and optimised the inspection software to improve reliability and reduce machine cycle time. Configured Festo motion axes to position the product fixture and inspection camera accurately, and set up barcode reading with AutoID Navigator. Integrated communication with the Sherpa MES to exchange production data and inspection results, and contributed to overall machine integration and functional validation.',
+            media: ['LED tail-light inspection project video']
+          },
+          {
+            title: 'Automotive Connector',
+            client: 'Aptiv, Morocco', date: '2024', type: 'Automotive Inspection',
+            description: 'Quality-inspection machine for an automotive connector.',
+            contribution: 'Developed and integrated image-processing and inspection routines for automotive connectors, including checks of critical components such as seals and Terminal Position Assurance (TPA) locks, within an automated test environment.',
+            media: ['Automotive connector inspection project']
+          },
+          {
+            title: 'Automatic Gearbox Housing',
+            client: 'PSA / Valeo, Tunisia', date: 'Nov 2023 – Feb 2024', type: 'Automotive Inspection',
+            description: 'Quality-inspection machine for an automatic gearbox housing.',
+            contribution: 'Debugged and maintained the C-based inspection application developed with LabWindows/CVI, fine-tuned Cognex vision job files, and performed repeatability and reproducibility (R&R) tests to assess inspection consistency. Supported mechanical maintenance, prepared technical documentation and coordinated directly with the customer on site as the technical liaison between the company and the customer, helping troubleshoot issues and maintain reliable machine operation.',
+            media: ['Automatic gearbox housing inspection project']
+          }
+        ],
         de: [
           {
             title: 'Automatisierte Klassifizierung und robotergestützte Handhabung von Automobilteilen',
@@ -1035,27 +1082,12 @@
       }
 
       function translateProjectData(lang) {
-        // English is the source of truth: preserve the latest, project-specific content
-        // from the main projects array instead of replacing it with an older translation table.
-        if (lang === 'en') {
-          projects.forEach((project, index) => {
-            const original = originalProjects[index];
-            project.title = original.title;
-            project.client = original.client;
-            project.date = original.date;
-            project.type = original.type;
-            project.description = original.description;
-            project.contribution = original.contribution;
-            project.technologies = [...original.technologies];
-            project.categories = [...original.categories];
-            project.media = original.media.map(item => ({ ...item }));
-          });
-          return;
-        }
-
-        const localized = projectText[lang];
+        // All displayed project text comes from the selected language. The source
+        // project objects are used only for language-independent data such as media
+        // paths, technologies and category tags.
+        const localized = projectText[lang] || projectText.en;
         projects.forEach((project, index) => {
-          const data = localized[index];
+          const data = localized[index] || projectText.en[index];
           const original = originalProjects[index];
           project.title = data.title;
           project.client = data.client;
@@ -1067,7 +1099,7 @@
           project.categories = [...original.categories];
           project.media = original.media.map((item, mediaIndex) => ({
             ...item,
-            alt: data.media[mediaIndex] || item.alt
+            alt: data.media[mediaIndex] || item.alt || data.title
           }));
         });
       }
@@ -1082,9 +1114,9 @@
           const detailsSummary = card.querySelector('.project-details summary');
           if (detailsSummary) detailsSummary.textContent = t.projectDetails;
           const details = card.querySelectorAll('.details-content p');
-          if (details[0]) details[0].innerHTML = `<strong>${t.application}</strong><br>${project.description}`;
-          if (details[1]) details[1].innerHTML = `<strong>${t.scope}</strong><br>${project.contribution}`;
-          if (details[2]) details[2].innerHTML = `<strong>${t.technologies}</strong><br>${project.technologies.join(' · ')}`;
+          if (details[0]) details[0].innerHTML = `<strong>${escapeHtml(t.application)}</strong><br>${escapeHtml(project.description)}`;
+          if (details[1]) details[1].innerHTML = `<strong>${escapeHtml(t.scope)}</strong><br>${escapeHtml(project.contribution)}`;
+          if (details[2]) details[2].innerHTML = `<strong>${escapeHtml(t.technologies)}</strong><br>${project.technologies.map(escapeHtml).join(' · ')}`;
           const mediaArea = card.querySelector('.project-media');
           if (mediaArea) mediaArea.setAttribute('aria-label', lang === 'de' ? `Fotos und Videos für ${project.title}` : lang === 'fr' ? `Photos et vidéos pour ${project.title}` : `Photos and videos for ${project.title}`);
           card.querySelectorAll('.media-error-note').forEach(note => {
@@ -1197,7 +1229,7 @@
         document.getElementById('projectSearch').placeholder = t.searchPlaceholder;
         document.getElementById('projectSearch').setAttribute('aria-label', t.searchPlaceholder);
         setListText('.filter-button', t.filters);
-        setText('.results-line span:last-child', t.projectMediaNote);
+        // Keep the live result counter reserved for the project count; the gallery has no second metadata span.
         setText('.skills-grid .skill-card:nth-child(1) h3', t.skills[0][0]);
         setText('.skills-grid .skill-card:nth-child(1) p', t.skills[0][1]);
         setText('.skills-grid .skill-card:nth-child(2) h3', t.skills[1][0]);
